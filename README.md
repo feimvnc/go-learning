@@ -4,7 +4,7 @@ notes of learning go programming languages
 projects to understand concepts and coding 
 
 # learning resources used 
-Ultimate Go Programming, by William Kennedy (Bill Kennedy)
+Ultimate Go Programming, by William Kennedy (Bill Kennedy)  
 Great infomation on Go design guidelines, language, mechanism, which are very valuable to learn inside and out about Go and why, how to use them 
 
 

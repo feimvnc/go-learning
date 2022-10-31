@@ -1,0 +1,71 @@
+design guidelines 
+language syntax 
+data structure 
+decoupling 
+composition 
+error handling (integrity)
+pakcaging 
+go routines (concurrency)
+data races 
+channels 
+concurrency pattern 
+testing 
+benchmarking
+profiling and tracing 
+
+ch 1
+prepare your mind (how, why)
+how to build healthy team, people, and projects with large amounts of code 
+build thin layer of de-coupling 
+if performance matters, that's hardware that matters which hardware perform instructions
+hardware is platform at the end of the day if performance matters 
+engineering is the understanding of the cost
+go present an option to allow you to minimize the use of hardware, cloud, hareware, developer, time
+quality, efficiency, simplicity, engineering philosophy
+
+"There are two kinds of software projects: those that fail, and those that turn into legacy horrors" - Peter Weinberger (inventor of awk)  
+
+"Legacy software is an unappreciated but serious problem. Legacy code may be the downfall of our civilization." - Chuck Moore (inventor of Forth)  
+
+"We think awful code is written by awful devs. But in reality, it's written by reasonable devs in awful circumstances." - Sarah Mei 
+
+linux kernel has 24 millions lines of code.  
+
+Mental model of software engineer coding  
+15+ bugs per 1000 lines of code  
+
+Bjarne Stroustrup: writing more code than you need results in ugly, large, slow code:  
+Ugly: leaves places for bugs to hide 
+Large: ensure incomplete tests 
+Slow: Encourages the use of shortcuts and dirty tricks 
+
+Less is always more.  
+
+Integrity, Readability
+
+Is Go OOP?  
+Go has types, but no type hierarchy
+Methods can be defined for all types 
+Interfaces are implemented impliicitly 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mechanism sympathies 
+
