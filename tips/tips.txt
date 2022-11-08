@@ -1,0 +1,11 @@
+few tips 
+
+
+vscode - multiple linees / word edit 
+1 select word
+2 Ctrl + F to select multiple occurrences 
+3 option + enter to activate, set cursor at all found occurences 
+4 type new word to replacee 
+
+
+data sciencee = computer science + data mining 

@@ -1,0 +1,12 @@
+Go 1.19, new feature, allow developer to set memory limit for their Go applications 
+GopherCon Europe 2022 - Respecting Memory Limits in Go
+https://www.youtube.com/watch?v=07wduWyWx8M&list=PLtoVuM73AmsJjj5tnZ7BodjN_zIvpULSx&index=2
+
+Heap: Memory managed by the GC, go complier can't find the space at compile time'
+Live: Memory reachable by the program
+New: New memory that may be live, GC may not look at it  yet
+
+
+\
+
+

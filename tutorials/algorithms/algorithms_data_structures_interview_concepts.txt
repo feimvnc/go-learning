@@ -1,0 +1,112 @@
+1. logarithm, math concept
+complexity analysis 
+logarithm time operation is so much faster and better than linear time 
+
+log(2)=1
+log(4)=2
+log(8)=3
+log(16)=4
+log(32)=5
+log(64)=6
+log(128)=7
+...
+log(4billion) = 32
+
+
+2. graph traversal 
+tree traversal, matrix traversal 
+depth first search, breath first search , dfs, bfs 
+cyclic graphs , keep track of visited nodes 
+graph travese graph 
+
+##
+dfs 
+type Node struct {
+  Value int
+  Children []*Node
+}
+
+func (n *Node) DepthFirstSearch(array []int) []int {
+  array = append(array, n.Value)
+  for _, child := range n.Children {
+    array = child.DepthFirstSearch(array)
+  }
+}
+
+Algorithm DFS(G, v)
+  if v is already visited 
+    return 
+  Mark v as visited 
+  // Perform some operation on v 
+  for all neighbors x of v 
+    DFS(G, v)
+
+##
+bfs algorithm 
+Algorithm BFS(G, v)
+  Q <- new empty FISO queue 
+  Mark v as visited 
+  Q.enqueue(v)
+  while Q is not empty 
+    a <- Q.dequeue()
+    // perform some operation on a 
+    for all unvisited neighbors x of a 
+      mark x as visited 
+      Q.enqueue(x)
+
+
+
+3. binary search 
+binary is much better than linear search 
+
+
+4. sliding window technique 
+manipulatinig two pointers at same time 
+left index / pointer and right index / pointer moving simultaneously
+longest palindromic problem , substring problem 
+
+
+5 recursion 
+some problems can be solved recursively easily than iteratively 
+fibonacci, calculating height of a binary tree , the depth of nodes in a binary tree 
+
+
+6. inverting a binary tree and reversing a linked list 
+
+def invert_binary_tree(tree):
+  if tree is None:
+    return 
+  tree.left, tree.right = tree.right, tree.left
+  invert_binary_tree(tree.left)
+  invert_binary_tree(tree.right))
+
+
+linked_list, manipulating pointer, don't lose reference two nodes in the linked list 
+
+
+7 suffix tree  (advanced data structure)
+
+create a tree structure for string values 
+
+
+
+8 heaps (relatively advanced data structure) 
+min heaps, max heaps 
+can be easily represented dasily / elegantly in an array 
+
+
+9 dynamic programming 
+first solve a smaller version of a problem 
+then solve a even smaller problem 
+
+
+10. sorting algorithm , quick sort, merge sort 
+
+quick sort, O(nlog(n)) time, better than bubble sort 
+select a pivot, then swap them 
+quick sort, then quick select, to select the biggest or smallest value 
+
+
+
+
+
