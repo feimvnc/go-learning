@@ -63,3 +63,21 @@ go run main.go
 Y:  [[200] [-200]] Z:  [[200] [-200]]
 Y == A true
 Z == A false
+
+
+## run with docker 
+docker image ls
+docker image rm tfapp -f  # remove previous build 
+docker build -t tfapp .
+# see below result 
+# tfapp                    latest                e0f21a9ea742    3 seconds ago    linux/amd64    1.4 GiB    457.3 MiB
+
+docker run tfapp
+
+# output 
+2022-11-12 16:44:42.440680: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-12 16:44:42.443784: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+Y:  [[200] [-200]] Z:  [[200] [-200]]
+Y == A true
+Z == A false
