@@ -33,3 +33,7 @@ lima stop default
 lima start default 
 
 
+## lima-on-mac-installation-guide.md
+https://gist.github.com/toricls/d3dd0bec7d4c6ddbcf2d25f211e8cd7b
+
+
