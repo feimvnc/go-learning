@@ -1,0 +1,26 @@
+  git clone https://go.googlesource.com/go goroot
+  cd goroot/
+  cd src
+  ./all.bash 
+
+
+...
+##### ../misc/cgo/testplugin
+ok  	misc/cgo/testplugin	0.150s
+
+##### ../misc/cgo/errors
+PASS
+
+##### ../test/bench/go1
+ok  	test/bench/go1	0.495s [no tests to run]
+
+##### ../test
+
+##### API check
+±pkg runtime/cgo, type Incomplete struct
+
+ALL TESTS PASSED
+---
+Installed Go for darwin/amd64 in /Users/user/goroot
+Installed commands in /Users/user/goroot/bin
+*** You need to add /Users/user/goroot/bin to your PATH.
