@@ -1,3 +1,5 @@
+source instruction: https://go.dev/doc/install/source
+
   git clone https://go.googlesource.com/go goroot
   cd goroot/
   cd src
