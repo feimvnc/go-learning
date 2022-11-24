@@ -9,3 +9,23 @@ vscode - multiple linees / word edit
 
 
 data sciencee = computer science + data mining 
+
+
+about pointer 
+operation *cptr = *cptr + 1 
+it can be split up into 3 operations: fetch old value by dereferencing pointer, increment value, save value into pointer address.
+
+about channel
+use a channel with a buffer of 1 to store the current number, fetch it from the channel when you need it, change it at will, then put it back for others to use.
+
+
+# delete git directory
+git filter-branch -f --tree-filter "rm -rf directory-to-delete" --prune-empty HEAD
+git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+echo directory-to-delete/ >> .gitignore
+git add .gitignore
+git commit -m "update git history"
+git gc
+git push origin master --force
+
+
