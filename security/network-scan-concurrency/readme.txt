@@ -1,5 +1,5 @@
 source: https://www.youtube.com/watch?v=PAUjYyBfELk
-https://github.com/jboursiquot/portscan
+source: https://github.com/jboursiquot/portscan
 
 use net.Dial to build a network scan utility 
 
@@ -114,4 +114,41 @@ docker run -d --name mongodb -p 27017:27017 mongo
 Results
 ---x
 27017 - open
+
+
+#semaphore-with-timeout
+(base) user:semaphore-with-timeout user$ go run main.go -ports 27000-27020
+27000 closed (dial tcp 127.0.0.1:27000: connect: connection refused)
+27014 closed (dial tcp 127.0.0.1:27014: connect: connection refused)
+27019 closed (dial tcp 127.0.0.1:27019: connect: connection refused)
+27002 closed (dial tcp 127.0.0.1:27002: connect: connection refused)
+27011 closed (dial tcp 127.0.0.1:27011: connect: connection refused)
+27015 closed (dial tcp 127.0.0.1:27015: connect: connection refused)
+27012 closed (dial tcp 127.0.0.1:27012: connect: connection refused)
+
+Results
+---
+27017 - open
+
+
+# pipeline 
+(base) user:network-scan-concurrency user$ cd pipeline/
+(base) user:pipeline user$ go run main.go 
+completed, check scans.csv for results
+
+ (base) user:pipeline user$ cat scans.csv 
+port,open,scanError,scanDuration
+27017,true,,246.074µs
+
+# fan out and fan in 
+
+(base) user:fan-out-fan-in user$ go run main.go -ports 27015-27020
+0xc00002c240
+0xc000024300
+main.scanOp{port:27015, open:false, scanErr:"dial tcp 127.0.0.1:27015: connect: connection refused", scanDuration:259903}
+main.scanOp{port:27016, open:false, scanErr:"dial tcp 127.0.0.1:27016: connect: connection refused", scanDuration:200537}
+main.scanOp{port:27018, open:false, scanErr:"dial tcp 127.0.0.1:27018: connect: connection refused", scanDuration:97975}
+main.scanOp{port:27020, open:false, scanErr:"dial tcp 127.0.0.1:27020: connect: connection refused", scanDuration:91425}
+main.scanOp{port:27019, open:false, scanErr:"dial tcp 127.0.0.1:27019: connect: connection refused", scanDuration:174316}
+main.scanOp{port:27017, open:true, scanErr:"", scanDuration:261235}
 

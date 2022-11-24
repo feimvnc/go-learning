@@ -56,7 +56,7 @@ func main() {
 		}
 	}
 
-	fmt.Print("completed, check scans.csv for results ")
+	fmt.Print("completed, check scans.csv for results\n\n ")
 }
 
 func parsePortsToScan(portsFlag string) ([]int, error) {

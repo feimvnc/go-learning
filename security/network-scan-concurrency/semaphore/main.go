@@ -21,7 +21,7 @@ var ports string
 
 func init() {
 	flag.StringVar(&host, "host", "127.0.0.1", "host to scan")
-	flag.StringVar(&ports, "ports", "80", "port(s), 27000-27020")
+	flag.StringVar(&ports, "ports", "27017", "port(s), 27000-27020")
 }
 func main() {
 	flag.Parse()
