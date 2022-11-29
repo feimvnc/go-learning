@@ -1,0 +1,91 @@
+# source 
+# https://github.com/terrastruct/d2
+# https://github.com/terrastruct/d2/blob/v0.0.13/docs/assets/cheat_sheet.pdf
+#
+# curl -fsSL https://d2lang.com/install.sh | sh -s --
+# touch input.d2 
+# d2 --watch input.d2
+
+hello: hi
+hello -> world: bye
+
+
+IBM CPU: {
+    Core 0
+    Core 1
+    Core 2
+
+    Core 0 -> Bus Interface 
+    Core 1 -> Bus Interface 
+    Core 2 -> Bus Interface 
+}
+
+Latte GPU: {
+    Memory Bridge
+}
+IBM CPU.Bus Interface -> Latte GPU 
+
+
+#
+s: {
+    hexagon: {shape: hexagon}
+    queue: {shape: queue}
+    package: {shape: package}
+
+    cylinder: {shape: cylinder}
+    page: {shape: page}
+    cloud: {shape: cloud}
+
+    myNode: {shape: circle}
+    server 
+}
+
+aws.server 
+aws: {
+    server
+}
+a -> b -> c 
+
+
+
+t: |`go 
+    func(){
+        fmt.Printf("hello")
+    }()
+`|
+
+
+board.diagram -> diagram.id 
+\n 
+
+
+diagram: {
+    shape: sql_table 
+    id: int {constraint: primary_key}
+}
+
+
+board: {
+    shape: sql_table
+    
+    id: int {constraint: primary_key}
+    frame: int (constraint: foreign_key)
+    diagram: int{constraint: foreign_key}
+    board_objects: jsonb
+    last_updated: timestamp with time zone 
+    last_thumbgen: timestamp with time zone 
+    dsl: text 
+}
+
+
+D2 AST Parser: {
+    shape: class 
+    
+    +prrevRune: rune 
+    prevColumn: int 
+
+    -eatSpace(eatNewlines bool): (rune, error)
+    unreadRune()
+
+    \#scanKey(r rune): (k Key, _ error)
+}
