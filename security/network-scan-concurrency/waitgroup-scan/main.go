@@ -7,6 +7,7 @@ import (
 	"net"
 	"strconv"
 	"sync"
+	"time"
 )
 
 var host string
@@ -15,11 +16,13 @@ var toPort string
 
 func init() {
 	flag.StringVar(&host, "host", "127.0.0.1", "host to scan")
-	flag.StringVar(&fromPort, "from", "27010", "start port")
-	flag.StringVar(&toPort, "to", "27020", "end port")
+	flag.StringVar(&fromPort, "from", "1", "start port")
+	flag.StringVar(&toPort, "to", "65535", "end port")
 }
 
 func main() {
+	start := time.Now()
+
 	flag.Parse()
 
 	fp, err := strconv.Atoi(fromPort)
@@ -46,7 +49,7 @@ func main() {
 			defer wg.Done()
 			conn, err := net.Dial("tcp", fmt.Sprintf("%s:%d", host, p))
 			if err != nil {
-				log.Printf("%d closed (%s)\n", p, err)
+				//log.Printf("%d closed (%s)\n", p, err)
 				return
 			}
 			conn.Close()
@@ -56,5 +59,8 @@ func main() {
 	// tell main goroutine to wait, until wait counter is reduced
 	// otherwise blocking happens
 	wg.Wait()
-	log.Println("done")
+	//log.Println("done")
+
+	elapsed := time.Since(start)
+	fmt.Println(elapsed)
 }

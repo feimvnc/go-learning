@@ -19,6 +19,7 @@ func Connect() {
 	}
 	fmt.Println("connected to mysql ...")
 	db = d
+	
 }
 
 func GetDB() *gorm.DB {
